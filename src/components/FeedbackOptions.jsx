@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
  return (
    <div>
@@ -11,4 +12,9 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
     <button onClick={() => this.handleClick('bad')}>Bad</button> */}
    </div>
  );
+}
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired
 }
